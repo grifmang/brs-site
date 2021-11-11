@@ -51,10 +51,10 @@ a:focus {
   text-decoration: none;
   color: #608dfd;
 }
-ul,
+/* ul,
 ol {
   list-style: none;
-}
+} */
 ul,
 ol {
   padding: 0;
@@ -291,7 +291,9 @@ header .intro-text {
   padding: 0;
 }
 #about .about-text li:before {
-  content: "\f00c";
+  /* content: "\f00c"; */
+  content: url('../img/icons/list-icon.png');
+  /* list-style-image: url('../img/icons/list-icon.png'); */
   font-family: "FontAwesome";
   color: #5ca9fb;
   font-size: 11px;
