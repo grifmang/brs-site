@@ -221,8 +221,8 @@ a:focus,
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
-  font-size: 82px;
-  font-weight: 700;
+  font-size: 52px;
+  /* font-weight: 700; */
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
@@ -243,6 +243,8 @@ header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
+  font-family: Raleway;
+  font-weight: 0;
 }
 /* Features Section */
 #features {

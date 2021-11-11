@@ -16,16 +16,19 @@ export const Contact = (props) => {
   const clearState = () => setState({ ...initialState })
 
   const handleSubmit = (e) => {
+    console.log(e.target)
     e.preventDefault()
-    console.log(name, email, message)
+    // console.log(name, email, message)
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID'
+        'service_32dhyws', 'template_dq55sxe', e.target, 'user_rVHriXA2NSg2HKr1RODSm'
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        // (result) => {
+          () => {
+          // console.log(result.text)
           clearState()
+          // setState({ ...initialState })
         },
         (error) => {
           console.log(error.text)
@@ -39,13 +42,15 @@ export const Contact = (props) => {
           <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
-                <h2>Get In Touch</h2>
+                <h2>Install an alley in your home?</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                Looking to install an alley in your home? We can help!
+                Fill out the form below and we will get back to you as soon as possible.
+                 <strong> Please include # of lanes, Lane Type, and Contact Number in message.</strong>
                 </p>
               </div>
-              <form name='sentMessage' validate onSubmit={handleSubmit}>
+              {/* <form name='sentMessage' validate onSubmit={handleSubmit}> */}
+              <form name='sentMessage' onSubmit={handleSubmit}>
                 <div className='row'>
                   <div className='col-md-6'>
                     <div className='form-group'>
@@ -53,6 +58,7 @@ export const Contact = (props) => {
                         type='text'
                         id='name'
                         name='name'
+                        value={name}
                         className='form-control'
                         placeholder='Name'
                         required
@@ -67,6 +73,7 @@ export const Contact = (props) => {
                         type='email'
                         id='email'
                         name='email'
+                        value={email}
                         className='form-control'
                         placeholder='Email'
                         required
@@ -83,6 +90,7 @@ export const Contact = (props) => {
                     className='form-control'
                     rows='4'
                     placeholder='Message'
+                    value={message}
                     required
                     onChange={handleChange}
                   ></textarea>
@@ -90,13 +98,13 @@ export const Contact = (props) => {
                 </div>
                 <div id='success'></div>
                 <button type='submit' className='btn btn-custom btn-lg'>
-                  Send Message
+                  Send Request
                 </button>
               </form>
             </div>
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
-            <div className='contact-item'>
+            {/* <div className='contact-item'>
               <h3>Contact Info</h3>
               <p>
                 <span>
@@ -104,7 +112,7 @@ export const Contact = (props) => {
                 </span>
                 {props.data ? props.data.address : 'loading'}
               </p>
-            </div>
+            </div> */}
             <div className='contact-item'>
               <p>
                 <span>
@@ -113,16 +121,16 @@ export const Contact = (props) => {
                 {props.data ? props.data.phone : 'loading'}
               </p>
             </div>
-            <div className='contact-item'>
+            {/* <div className='contact-item'>
               <p>
                 <span>
                   <i className='fa fa-envelope-o'></i> Email
                 </span>{' '}
                 {props.data ? props.data.email : 'loading'}
               </p>
-            </div>
+            </div> */}
           </div>
-          <div className='col-md-12'>
+          {/* <div className='col-md-12'>
             <div className='row'>
               <div className='social'>
                 <ul>
@@ -144,15 +152,15 @@ export const Contact = (props) => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2020 Issaaf Kattan React Land Page Template. Design by{' '}
-            <a href='http://www.templatewire.com' rel='nofollow'>
-              TemplateWire
+            &copy; 2021 Advanced IT Solutions Design by{' '}
+            <a href='http://www.advanceditsolutions.net' rel='nofollow'>
+              Advanced IT Solutions
             </a>
           </p>
         </div>
