@@ -4,10 +4,10 @@ export const Services = (props) => {
       <div className='container'>
         <div className='section-title'>
           <h2>Our Services</h2>
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
             dapibus leonec.
-          </p>
+          </p> */}
         </div>
         <div className='row'>
           {props.data
@@ -18,6 +18,8 @@ export const Services = (props) => {
                   <div className='service-desc'>
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
+                    <p>{d.t2}</p>
+                    <p>{d.t3}</p>
                   </div>
                 </div>
               ))

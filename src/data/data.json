@@ -6,16 +6,16 @@
   "About": {
     "paragraph": "Founded in 1985, Bowling Repair Services has provided pinsetter technical service, related equipment service, preventive maintenance programs and training on both Brunswick and AMF equipment for the last thirty-two years. With forty-eight years of experience. We provide quality service to Bowling Centers of all sizes. We pride ourselves in helping our customers achieve a good high volume of machine operation.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Dependable",
+      "Reliable",
+      "Decades of experience",
+      "Decades of knowledge"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Preventative maintenance",
+      "Candlepin experience",
+      "We do complete rebuilds",
+      "AMF, Brunswick, and QubicaAMF experience"
     ]
   },
   "Gallery": [
@@ -67,34 +67,46 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-user-md",
+      "name": "Repair",
+      "text": "We will repair your residential bowling equipment.",
+      "t2": "",
+      "t3": ""
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-medkit",
+      "name": "Maintenance",
+      "text": "We provide scheduled preventative maintenance programs tailored to your residential bowling equipment.",
+      "t2": "",
+      "t3": ""
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-wrench",
+      "name": "Pinsetters",
+      "text": "Brunswick: A, A2, GS & GS-X Series",
+      "t2": "AMF: 82-70, 82-90",
+      "t3": "QubicaAMF: 82-90XL, 82-90XLi, 82-90XLi Edge"
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-home",
+      "name": "Rebuilds",
+      "text": "We offer complete rebuilds of your residential setups.",
+      "t2": "",
+      "t3": ""
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-truck",
+      "name": "Mechanic",
+      "text": "We also offer on duty mechanic service when you may have a special event planned.",
+      "t2": "",
+      "t3": ""
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-thumbs-o-up",
+      "name": "Confidence",
+      "text": "Feel confident when hiring us. We have he knowledge and experience to tackle any issue or challenge you can throw at us.",
+      "t2": "",
+      "t3": ""
     }
   ],
   "Testimonials": [
@@ -154,7 +166,7 @@
   "Contact": {
     "address": "4321 California St, San Francisco, CA 12345 ",
     "phone": "+1 413 348 5650",
-    "email": "grifmang@gmail.com",
+    "email": "info@company.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
