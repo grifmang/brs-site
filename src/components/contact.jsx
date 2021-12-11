@@ -42,7 +42,7 @@ export const Contact = (props) => {
           <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
-                <h2>Installing bowling alleys in your home?</h2>
+                <h2>Installing bowling lanes in your home?</h2>
                 <p>
                 Looking to install a bowling lane in your home? We can help!
                 Fill out the form below and we will get back to you as soon as possible.
