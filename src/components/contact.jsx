@@ -1,13 +1,30 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import ReCaptchaV2 from 'react-google-recaptcha'
+import axios from 'axios'
+require('dotenv').config()
 
 const initialState = {
   name: '',
   email: '',
   message: '',
+  token: '',
+  isVerified: false
 }
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState)
+  const [{ name, email, message, token, isVerified }, setState] = useState(initialState)
+
+  // const handleToken = (token) => {
+  //   setState((currentForm) => {
+  //    return {...currentForm, token }
+  //   })
+  // }
+
+  const handleExpire = () => {
+    setState((currentForm) => {
+     return {...currentForm, token: null }
+    })
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -15,10 +32,18 @@ export const Contact = (props) => {
   }
   const clearState = () => setState({ ...initialState })
 
+  const handleToken = (token) => {
+    axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
+    .then(response => {
+      if (response.success) {
+        setState((prevState) => ({ ...prevState, isVerified: true }))
+      }
+    })
+  }
+
   const handleSubmit = (e) => {
-    console.log(e.target)
     e.preventDefault()
-    // console.log(name, email, message)
+
     emailjs
       .sendForm(
         'service_32dhyws', 'template_dq55sxe', e.target, 'user_rVHriXA2NSg2HKr1RODSm'
@@ -96,8 +121,16 @@ export const Contact = (props) => {
                   ></textarea>
                   <p className='help-block text-danger'></p>
                 </div>
+                <ReCaptchaV2
+                  sitekey={process.env.REACT_APP_SITE_KEY}
+                  name='token'
+                  id='token'
+                  value={token}
+                  onChange={handleToken}
+                  onExpire={handleExpire}
+                />
                 <div id='success'></div>
-                <button type='submit' className='btn btn-custom btn-lg'>
+                <button type='submit' disabled={isVerified} className='btn btn-custom btn-lg'>
                   Send Request
                 </button>
               </form>
