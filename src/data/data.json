@@ -1,66 +1,66 @@
 {
   "Header": {
     "title": "Bowling Repair Services",
-    "paragraph": ""
+    "paragraph": "Providing the best residential bowling services in the Northeast."
   },
   "About": {
-    "paragraph": "Founded in 1985, Bowling Repair Services has provided pinsetter technical service, related equipment service, preventive maintenance programs and training on both Brunswick and AMF equipment for the last thirty-two years. With forty-eight years of experience. We provide quality service to Bowling Centers of all sizes. We pride ourselves in helping our customers achieve a good high volume of machine operation.",
+    "paragraph": "Founded in 1985, Bowling Repair Services has provided pinsetter technical service, related equipment service, preventive maintenance programs and training on both Brunswick and AMF equipment for the last thirty-two years. With forty-eight years of experience. We provide quality service to venues with six lanes or less. We pride ourselves in helping our customers achieve a good high volume of machine operation.",
     "Why": [
       "Dependable",
       "Reliable",
       "Decades of experience",
-      "Decades of knowledge"
+      "Related bowling equipment services"
     ],
     "Why2": [
       "Preventative maintenance",
-      "Candlepin experience",
+      "Decades of knowledge",
       "We do complete rebuilds",
       "AMF, Brunswick, and QubicaAMF experience"
     ]
   },
   "Gallery": [
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/1.jpg",
       "smallImage": "img/portfolio/1-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/2.jpg",
       "smallImage": "img/portfolio/2-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/3.jpg",
       "smallImage": "img/portfolio/3-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/4.jpg",
       "smallImage": "img/portfolio/4-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/5.jpg",
       "smallImage": "img/portfolio/5-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/6.jpg",
       "smallImage": "img/portfolio/6-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/7.jpg",
       "smallImage": "img/portfolio/7-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/8.jpg",
       "smallImage": "img/portfolio/8-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "",
       "largeImage": "img/portfolio/9.jpg",
       "smallImage": "img/portfolio/9-small.jpg"
     }
@@ -68,8 +68,15 @@
   "Services": [
     {
       "icon": "fa fa-user-md",
-      "name": "Repair",
+      "name": "Service",
       "text": "We will repair your residential bowling equipment.",
+      "t2": "",
+      "t3": ""
+    },
+    {
+      "icon": "fa fa-wrench",
+      "name": "Pinsetters",
+      "text": "We service Brunswick, QubicaAMF, and AMF Pinsetters.",
       "t2": "",
       "t3": ""
     },
@@ -81,13 +88,6 @@
       "t3": ""
     },
     {
-      "icon": "fa fa-wrench",
-      "name": "Pinsetters",
-      "text": "Brunswick: A, A2, GS & GS-X Series",
-      "t2": "AMF: 82-70, 82-90",
-      "t3": "QubicaAMF: 82-90XL, 82-90XLi, 82-90XLi Edge"
-    },
-    {
       "icon": "fa fa-home",
       "name": "Rebuilds",
       "text": "We offer complete rebuilds of your residential setups.",
@@ -96,7 +96,7 @@
     },
     {
       "icon": "fa fa-truck",
-      "name": "Mechanic",
+      "name": "Service Technician",
       "text": "We also offer on duty mechanic service when you may have a special event planned.",
       "t2": "",
       "t3": ""
