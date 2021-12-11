@@ -35,7 +35,7 @@ export const Contact = (props) => {
   const handleToken = (token) => {
     axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
     .then(response => {
-      if (response.success) {
+      if (response.data.success) {
         setState((prevState) => ({ ...prevState, isVerified: true }))
       }
     })
