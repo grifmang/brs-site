@@ -130,7 +130,7 @@ export const Contact = (props) => {
                   onExpire={handleExpire}
                 />
                 <div id='success'></div>
-                <button type='submit' disabled={isVerified} className='btn btn-custom btn-lg'>
+                <button type='submit' disabled={!isVerified} className='btn btn-custom btn-lg'>
                   Send Request
                 </button>
               </form>
