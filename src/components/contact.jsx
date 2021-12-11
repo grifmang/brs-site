@@ -32,14 +32,24 @@ export const Contact = (props) => {
   }
   const clearState = () => setState({ ...initialState })
 
+  // const handleToken = (token) => {
+  //   axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
+  //   .then(response => {
+  //     console.log(response)
+  //     if (response.data.success) {
+  //       setState((prevState) => ({ ...prevState, isVerified: true }))
+  //     }
+  //   })
+  // }
   const handleToken = (token) => {
-    axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
-    .then(response => {
-      console.log(response)
-      if (response.data.success) {
-        setState((prevState) => ({ ...prevState, isVerified: true }))
-      }
-    })
+    setState((prevState) => ({ ...prevState, token: token, isVerified: true }))
+    // axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
+    // .then(response => {
+    //   console.log(response)
+    //   if (response.data.success) {
+    //     setState((prevState) => ({ ...prevState, isVerified: true }))
+    //   }
+    // })
   }
 
   const handleSubmit = (e) => {
