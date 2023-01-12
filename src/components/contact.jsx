@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
-import ReCaptchaV2 from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha'
 import axios from 'axios'
 require('dotenv').config()
 
@@ -32,24 +32,8 @@ export const Contact = (props) => {
   }
   const clearState = () => setState({ ...initialState })
 
-  // const handleToken = (token) => {
-  //   axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
-  //   .then(response => {
-  //     console.log(response)
-  //     if (response.data.success) {
-  //       setState((prevState) => ({ ...prevState, isVerified: true }))
-  //     }
-  //   })
-  // }
   const handleToken = (token) => {
     setState((prevState) => ({ ...prevState, token: token, isVerified: true }))
-    // axios.post('https://www.google.com/recaptcha/api/siteverify', {'secret': process.env.REACT_APP_SITE_KEY, 'response': token})
-    // .then(response => {
-    //   console.log(response)
-    //   if (response.data.success) {
-    //     setState((prevState) => ({ ...prevState, isVerified: true }))
-    //   }
-    // })
   }
 
   const handleSubmit = (e) => {
@@ -60,12 +44,7 @@ export const Contact = (props) => {
         'service_32dhyws', 'template_dq55sxe', e.target, 'user_rVHriXA2NSg2HKr1RODSm'
       )
       .then(
-        // (result) => {
-          () => {
-          // console.log(result.text)
-          clearState()
-          // setState({ ...initialState })
-        },
+          () => { clearState() },
         (error) => {
           console.log(error.text)
         }
@@ -85,7 +64,6 @@ export const Contact = (props) => {
                  <strong> Please include # of lanes and Contact Number in your message.</strong>
                 </p>
               </div>
-              {/* <form name='sentMessage' validate onSubmit={handleSubmit}> */}
               <form name='sentMessage' onSubmit={handleSubmit}>
                 <div className='row'>
                   <div className='col-md-6'>
@@ -132,13 +110,9 @@ export const Contact = (props) => {
                   ></textarea>
                   <p className='help-block text-danger'></p>
                 </div>
-                <ReCaptchaV2
+                <ReCAPTCHA
                   sitekey={process.env.REACT_APP_SITE_KEY}
-                  name='token'
-                  id='token'
-                  value={token}
                   onChange={handleToken}
-                  onExpire={handleExpire}
                 />
                 <div id='success'></div>
                 <button type='submit' disabled={!isVerified} className='btn btn-custom btn-lg'>
@@ -148,15 +122,6 @@ export const Contact = (props) => {
             </div>
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
-            {/* <div className='contact-item'>
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className='fa fa-map-marker'></i> Address
-                </span>
-                {props.data ? props.data.address : 'loading'}
-              </p>
-            </div> */}
             <div style={{ textAlign: 'center' }} className='contact-item'>
               <p style={{ fontSize: 'xx-large' }}>
                 <span>
@@ -165,38 +130,7 @@ export const Contact = (props) => {
                 {props.data ? props.data.phone : 'loading'}
               </p>
             </div>
-            {/* <div className='contact-item'>
-              <p>
-                <span>
-                  <i className='fa fa-envelope-o'></i> Email
-                </span>{' '}
-                {props.data ? props.data.email : 'loading'}
-              </p>
-            </div> */}
           </div>
-          {/* <div className='col-md-12'>
-            <div className='row'>
-              <div className='social'>
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : '/'}>
-                      <i className='fa fa-facebook'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : '/'}>
-                      <i className='fa fa-twitter'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : '/'}>
-                      <i className='fa fa-youtube'></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
       <div id='footer'>
