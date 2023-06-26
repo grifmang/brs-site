@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
@@ -56,7 +58,7 @@ export const Navigation = (props) => {
               </a>
             </li> */}
             <li>
-              <p>Contact: <a href="tel:413-348-5650">(413)348-5650</a></p>
+              <a href='#' className="page-scroll">Contact: <a href="tel:413-348-5650">(413)348-5650</a></a>
               {/* <a href='#contact' className='page-scroll'>
                 Contact
               </a> */}

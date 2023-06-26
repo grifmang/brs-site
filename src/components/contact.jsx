@@ -1,7 +1,9 @@
-import { useState } from 'react'
-import emailjs from 'emailjs-com'
-import ReCAPTCHA from 'react-google-recaptcha'
-import axios from 'axios'
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
+import React from "react";
+
 require('dotenv').config()
 
 const initialState = {
