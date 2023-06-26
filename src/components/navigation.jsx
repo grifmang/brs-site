@@ -56,9 +56,10 @@ export const Navigation = (props) => {
               </a>
             </li> */}
             <li>
-              <a href='#contact' className='page-scroll'>
+              <p>Contact: <a href="tel:413-348-5650">(413)348-5650</a></p>
+              {/* <a href='#contact' className='page-scroll'>
                 Contact
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
