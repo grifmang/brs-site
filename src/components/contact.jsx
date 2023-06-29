@@ -3,6 +3,8 @@ import emailjs from 'emailjs-com';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 import React from "react";
+import ButtonMailTo from "./sendEmail";
+import Telephone from './telephone';
 
 require('dotenv').config()
 
@@ -56,7 +58,7 @@ export const Contact = (props) => {
     <div>
       <div id='contact'>
         <div className='container'>
-          <div className='col-md-8'>
+          {/* <div className='col-md-8'>
             <div className='row'>
               <div className='section-title'>
                 <h2>Installing bowling lanes in your home?</h2>
@@ -122,14 +124,32 @@ export const Contact = (props) => {
                 </button>
               </form>
             </div>
-          </div>
-          <div className='col-md-3 col-md-offset-1 contact-info'>
-            <div style={{ textAlign: 'center' }} className='contact-item'>
+          </div> */}
+          {/* <div className='col-md-3 col-md-offset-1 contact-info'> */}
+          <div className='contact-info'>
+            <div style={{ textAlign: 'center', display: 'flex', justifyContent: 'space-between' }} className='contact-item'>
               <p style={{ fontSize: 'xx-large' }}>
+                <span>
+                  <i className='fa fa-user'></i> Name
+                </span>{' '}
+                <hr />
+                {props.data ? props.data.name : 'loading'}
+              </p>
+              <p style={{ fontSize: 'xx-large'}}>
                 <span>
                   <i className='fa fa-phone'></i> Phone
                 </span>{' '}
-                {props.data ? props.data.phone : 'loading'}
+                <hr />
+                {/* <a href={"tel:" + props.data ? props.data.phone : 'loading'}>(413) 348-5650</a> */}
+                <Telephone label="Call Me" />
+              </p>
+              <p style={{ fontSize: 'xx-large' }}>
+                <span>
+                  <i className='fa fa-envelope'></i> Email
+                </span>{' '}
+                <hr />
+                <ButtonMailTo label="Email Me" mailto={props.data ? props.data.email : 'loading'} />
+                {/* {props.data ? props.data.email : 'loading'} */}
               </p>
             </div>
           </div>
