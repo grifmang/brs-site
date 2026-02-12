@@ -6,7 +6,6 @@ import React from "react";
 import ButtonMailTo from "./sendEmail";
 import Telephone from './telephone';
 
-require('dotenv').config()
 
 const initialState = {
   name: '',
