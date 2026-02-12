@@ -58,7 +58,7 @@ export const Navigation = (props) => {
               </a>
             </li> */}
             <li>
-              <a href="tel:413-348-5650" className="page-scroll">Contact: <a>(413)348-5650</a></a>
+              <a href="tel:413-348-5650" className="page-scroll">Contact: (413)348-5650</a>
               {/* <a href='#contact' className='page-scroll'>
                 Contact
               </a> */}
